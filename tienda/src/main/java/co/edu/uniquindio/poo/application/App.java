@@ -21,24 +21,24 @@ public class App {
         System.out.println("Nombre de la tienda: " + tienda.getNombre());
         System.out.println("Productos de la tienda: ");
         for (Producto producto : tienda.getProductos()) {
-            System.out.println(producto.getNombre());
+            System.out.println("El nombre del Producto es: "+producto.getNombre() + " Y el precio de venta es: "+producto.calcularPrecioVenta());
         }
 
         Producto producto = new Producto("Pescado", 15000, Tipo.PERECEDERO);
         tienda.agregarProducto(producto);
         System.out.println("Productos de la tienda despues de agregar un producto: ");
         for (Producto productoAux : tienda.getProductos()) {
-            System.out.println(productoAux.getNombre());
+            System.out.println("El nombre del Producto es: "+productoAux.getNombre()+ " Y el precio de venta es: "+productoAux.calcularPrecioVenta());
         }
 
         tienda.eliminarProducto("Leche");
         System.out.println("Productos de la tienda despues de eliminar un producto: ");
         for (Producto productoAux : tienda.getProductos()) {
-            System.out.println("El nombre del Producto Es:"+productoAux.getNombre()+"El precio de venta es:"+productoAux.calcularPrecioVenta());
+            System.out.println("El nombre del Producto Es: "+productoAux.getNombre()+" Y el precio de venta es: "+productoAux.calcularPrecioVenta());
         }
 
         Producto productoBuscado = tienda.buscarProducto("Arroz");
-        System.out.println("Producto buscado: " + productoBuscado.getNombre());
+        System.out.println("El nombre del Producto buscado es: " + productoBuscado.getNombre());
         
     }
 }

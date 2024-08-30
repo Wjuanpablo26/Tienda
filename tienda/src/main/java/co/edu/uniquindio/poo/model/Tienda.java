@@ -87,17 +87,7 @@ public class Tienda {
         return mensaje;
     }
 
-    /**
-     * Metodo para calcular el precio total de los productos
-     * @return
-     */
-    public double calcularPrecioTotal(){
-        double precioTotal = 0;
-        for (Producto producto : productos) {
-            precioTotal += producto.calcularPrecioVenta();
-        }
-        return precioTotal;
-    }
+    
 
 
     
